@@ -1,0 +1,480 @@
+
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    #header {
+      background-color: #fff;
+      padding: 2rem 0 0 0;
+      text-align: center;
+    }
+    #project-header {
+      background-color: #f4f4f4;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .project-page-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #333;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .project-nav {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6rem;
+    }
+    .project-nav-btn {
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background: #f3f3f3;
+      transition: background 0.2s ease;
+    }
+    .project-nav-btn:hover{
+      background-color: #f3bbb6;
+      color: #fff;
+    }
+    .project-nav-link {
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+    .project-nav-link:hover {
+      background-color: #f3bbb6;
+      color: #fff;
+      text-decoration: underline;
+    }
+    #header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.2rem;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    #nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+    #nav ul li {
+        display: inline-block;
+    }
+    #nav a {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #333;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: background 0.2s;    
+    }
+    #nav a.button {
+        background-color: #c0392b;
+        color: #fff;
+        border-radius: 6px;
+        font-weight: bold;
+        margin-left: 1rem;
+    }
+    #nav a.button:hover {
+        background-color: #a93226;
+    }
+    .box {
+      background-color: #7e8f8b;
+      color: #222;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem auto;
+      max-width: 900px;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .box img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .box h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .box p {
+      font-size: 1.1rem;
+      text-align: center;
+      color: #222;
+    }
+    .skills-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .skills-col {
+      flex: 1 1 220px;
+      max-width: 300px;
+      background: none;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .skill-heading {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #000;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .experience-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .experience-row {
+      display: flex;
+      margin: 2rem 0;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .experience-col {
+      flex: 1 1 220px;
+      max-width: 300px;
+      background: none;
+      text-align: center;
+      margin: 0 1rem;
+    }
+    .experience-org {
+      font-size: 1.1rem;
+      color: #333;
+      margin-top: 0.5rem;
+    }
+    .experience-date {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+    .edu-cert-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .edu-cert-row {
+      display: flex;
+      margin-bottom: 2rem;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4.5rem;
+    }
+    .edu-col, .cert-col {
+      flex: 1 1 220px;
+      max-width: 500px;
+      min-width: 250px;
+    }
+    .edu-heading, .cert-heading {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #000;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .edu-item, .cert-item {
+      font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .edu-date, .cert-date {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+    .project-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: 'Poppins', Arial, sans-serif;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+    }
+    .project-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      text-align: center;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 350px;
+    }
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      max-width: 320px;
+    }
+    .project-thumb-link {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      color: #333;
+      text-decoration: underline;
+    }
+    .project-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #000;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .project-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      margin: 2rem auto;
+    }
+    .project-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin-bottom: 1.5rem;
+      display: block;
+      object-fit: cover;
+    }
+    .project-content {
+      max-width: 90%;
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .project-section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #333;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .project-description {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    .project-btn {
+      background-color: #c0392b;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+    .project-btn:hover {
+      background-color: #a93226;
+    }
+    #footer {
+      padding: 0.16 rem 0;
+      font-size: 0.9rem;
+      background-color: #030303;
+      color: #ffffff;
+    }
+    .footer-section {
+      text-align: center;
+      padding: 1rem 0;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .footer-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1100px;
+      margin: 0 auto 2rem auto;
+    }
+    /* .footer-col {
+      flex: 1 1 220px;
+      max-width: 300px;
+      text-align: center; */
+    .footer-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .footer-post {
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .footer-date-badge {
+      background-color: #c0392b;
+      color: #ffffff;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    .footer-date-badge strong {
+      font-size: 1.2rem;
+      display: block;
+    }
+    .footer-description {
+      font-size: 0.9rem;
+      color: #ffffff;
+      margin-top: 0.5rem;
+    }
+    .footer-social {
+      margin: 1.5rem 0 1rem 0;
+    }
+    .footer-social .icon:hover {
+      color: #c0392b;
+    }
+    .footer-location {
+      font-size: 0.9rem;
+      color: #ffffff;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    .footer-copyright {
+      font-size: 0.8rem;
+      text-align: center;
+      color: #ffffff;
+      margin-top: 1rem;
+    }
+    </style>
+	<head>
+		<title>project_title here</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+		<!-- Header -->
+			<section id="project-header">
+                <h1 class="project-page-title">Amazon Sales 2025</h1>
+				<div class="project-nav">
+                    <a href="index.html" class="project-nav-btn">Home</a>
+                    <a href="Project_2.html" class="project-nav-link">Next</a>
+                </div>
+            </section>
+		<!-- Main -->
+			<div class="project-main">
+				<!-- Content -->
+                 <img src="assets/images/project_1.png" alt="" class="project-image" />
+                 <div class="project-content">
+					<h2 class="project-section-title">ABOUT THE PROJECT</h2>
+					<p>
+					    The Amazon Sales Dashboard is a dynamic analytics solution designed to empower Amazon sellers and business managers with actionable insights into their store’s performance. Leveraging advanced data visualization techniques, the dashboard consolidates sales data from multiple sources to present a clear and interactive overview of key metrics such as total revenue, units sold, top-performing products, and sales distribution by region and time period.
+                    </p>
+                    <p>
+                         With intuitive charts and filters, users can easily identify sales trends, monitor inventory levels, and analyze customer purchasing behavior. The dashboard supports strategic decision-making by highlighting growth opportunities, seasonal patterns, and areas for operational improvement. Automated reporting features enable timely updates and reduce manual effort, while customizable views allow users to focus on metrics most relevant to their business goals.
+                    </p>
+                    <p>
+                        Whether you are a small business owner or a data analyst in a large enterprise, this dashboard streamlines the process of tracking performance, optimizing sales strategies, and driving sustainable business growth on the Amazon platform.
+                    </p>
+					<h2 class="project-section-title">SKILLS</h2>
+					<p>
+                        Built using tools such as Power BI, Python, and SQL, the Amazon Sales Dashboard ensures data accuracy, scalability, and security.
+                    </p>
+				</div>
+			</div>
+        </body>
+<!-- Footer -->
+ 
+ <section id="footer" class="footer-section">
+    <div class="footer-row">
+     
+      <!-- Left Column
+      <div class="col-6 col-12-medium">
+        <section>
+          <header>
+           <h2 style="color: #000000; font-size: 1.3rem; transform: translateX(6cm);">Latest Post</h2>
+          </header>
+			<ul class="dates">
+			<li>
+				<span class="date">Aug <strong>12</strong></span>
+				<h3 style="text-align: left;"><a href="#" style="color: #000000;">Dolore tempus ipsum feugiat nulla</a></h3>
+				<p style="text-align: left;">Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
+			</li>
+			</ul>
+          </ul>
+        </section>
+      </div> -->
+
+      <!-- Right Column -->
+      <div class="footer-col">
+        <h2 class="footer-title">Connect with Me</h2>
+        <div class="footer-social">
+				<!-- <a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a>
+				<a class="icon brands fa-medium" href="https://medium.com/@mkboamah" target="_blank" aria-label="Medium"></a> -->
+				<a class="icon fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/rhodalyn-yeboah" target="_blank" aria-label="LinkedIn"></a>
+				<a class="icon fa-brands fa-github" href="https://github.com/Rhodalyn029" target="_blank" aria-label="GitHub"></a>
+				<a class="icon fa-solid fa-envelope" href="mailto:rhodayeboah45@gmail.com" target="_blank" aria-label="Email"></a>
+        </div>  
+        <p class="footer-location"><strong>Location:</strong> Accra, Ghana</p>
+      </div>
+      <!-- Copyright -->
+      <div class="footer-copyright">
+        &copy; 2025 Yeboah. All rights reserved.
+      </div>
+    </div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		</body>
+</html>
+    </div>
+  </div>
+</section>
