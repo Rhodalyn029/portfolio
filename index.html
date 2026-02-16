@@ -2,193 +2,290 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rhodalyn Yeboah | Portfolio </title>
-  <meta name="description" content=" A curated collection of work highlighting creativity, technical skill, and a passion for impactful projects." />
-	
-<html>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<head>
-		<!-- Custom footer style -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhodalyn Yeboah | Portfolio</title>
+  <meta name="description" content="A curated collection of work highlighting creativity, technical skill, and a passion for impactful projects." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/images/github.png" />
+  
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       font-family: 'Poppins', Arial, sans-serif;
+      font-size: 16px;
     }
+
+    /* HEADER STYLES */
     #header {
       background-color: #fff;
-      padding: 2rem 0 0 0;
+      padding: 2rem 1rem;
       text-align: center;
+      width: 100%;
     }
+
     #header h1 {
-      font-size: 2.5rem;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
       font-weight: 600;
       margin-bottom: 1.5rem;
       letter-spacing: 0.2rem;
       font-family: 'Poppins', Arial, sans-serif;
     }
+
+    /* NAVIGATION STYLES */
     #nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        gap: 2.5rem;
+      list-style: none;
+      padding: 1rem;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 100%;
     }
+
     #nav ul li {
-        display: inline-block;
+      display: inline-block;
     }
+
     #nav a {
-        font-size: 1.15rem;
-        font-weight: 600;
-        color: #333;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        transition: background 0.2s;    
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
+      font-weight: 600;
+      color: #333;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s;
+      display: block;
     }
+
     #nav a.button {
-        background-color: #c0392b;
-        color: #fff;
-        border-radius: 6px;
-        font-weight: bold;
-        margin-left: 1rem;
+      background-color: #c0392b;
+      color: #fff;
+      border-radius: 6px;
+      font-weight: bold;
     }
+
     #nav a.button:hover {
-        background-color: #a93226;
+      background-color: #a93226;
     }
+
+    /* HERO/BANNER SECTION */
     .box {
       background-color: #7e8f8b;
       color: #222;
-      padding: 2rem;
+      padding: 2rem 1rem;
       border-radius: 8px;
       margin: 2rem auto;
       max-width: 900px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 2rem;
+      width: 90%;
     }
+
     .box img {
-      width: 250px;
+      width: 100%;
+      max-width: 250px;
       height: auto;
       border-radius: 8px;
     }
+
     .box h2 {
-      font-size: 1.5rem;
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
       font-weight: 600;
       margin-bottom: 1rem;
       text-align: center;
     }
+
     .box p {
-      font-size: 1.1rem;
+      font-size: clamp(1rem, 2vw, 1.1rem);
       text-align: center;
       color: #222;
+      line-height: 1.6;
     }
+
+    @media (min-width: 768px) {
+      .box {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .box img {
+        width: 50%;
+        flex-shrink: 0;
+      }
+    }
+
+    /* SKILLS SECTION */
     .skills-title {
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 5vw, 2rem);
       font-weight: 700;
       margin-bottom: 2rem;
       text-align: center;
       font-family: 'Poppins', Arial, sans-serif;
+      padding: 0 1rem;
     }
-    .skills-col {
-      flex: 1 1 220px;
-      max-width: 300px;
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0 1rem;
+      margin: 2rem 0;
+    }
+
+    .skill-col {
+      flex: 1 1 200px;
+      max-width: 280px;
       background: none;
       text-align: center;
-      margin-bottom: 2rem;
     }
+
+    .skill-col i {
+      font-size: clamp(2rem, 8vw, 5rem);
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
     .skill-heading {
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 3vw, 1.2rem);
       font-weight: 700;
       margin-bottom: 1rem;
       color: #000;
       font-family: 'Poppins', Arial, sans-serif;
     }
+
+    .skill-description {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* EXPERIENCE SECTION */
     .experience-title {
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 5vw, 2rem);
       font-weight: 700;
       margin-bottom: 2rem;
       text-align: center;
       font-family: 'Poppins', Arial, sans-serif;
+      padding: 0 1rem;
     }
+
     .experience-row {
       display: flex;
+      flex-wrap: wrap;
       margin: 2rem 0;
       justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 0 1rem;
     }
+
     .experience-col {
-      flex: 1 1 220px;
+      flex: 1 1 200px;
       max-width: 300px;
       background: none;
       text-align: center;
-      margin: 0 1rem;
     }
+
+    .experience-role {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      font-weight: 700;
+      color: #000;
+    }
+
     .experience-org {
-      font-size: 1.1rem;
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
       color: #333;
       margin-top: 0.5rem;
     }
+
     .experience-date {
-      font-size: 1rem;
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
       color: #666;
       margin-top: 0.5rem;
     }
+
+    /* EDUCATION & CERTIFICATIONS SECTION */
     .edu-cert-title {
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 5vw, 2rem);
       font-weight: 700;
       margin-bottom: 2rem;
       text-align: center;
       font-family: 'Poppins', Arial, sans-serif;
+      padding: 0 1rem;
+      margin-top: 2rem;
     }
+
     .edu-cert-row {
       display: flex;
+      flex-wrap: wrap;
       margin-bottom: 2rem;
       justify-content: center;
-      align-items: flex-start;
-      gap: 4.5rem;
+      gap: 2rem;
+      padding: 0 1rem;
     }
+
     .edu-col, .cert-col {
-      flex: 1 1 220px;
-      max-width: 500px;
+      flex: 1 1 200px;
+      max-width: 400px;
       min-width: 250px;
     }
+
     .edu-heading, .cert-heading {
-      font-size: 1.2rem;
+      font-size: clamp(1.1rem, 3vw, 1.2rem);
       font-weight: 700;
       margin-bottom: 1rem;
       color: #000;
       font-family: 'Poppins', Arial, sans-serif;
     }
+
     .edu-item, .cert-item {
-      font-size: 1.05rem;
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
       color: #333;
       margin-bottom: 0.5rem;
       font-family: 'Poppins', Arial, sans-serif;
+      line-height: 1.5;
     }
+
     .edu-date, .cert-date {
-      font-size: 0.95rem;
+      font-size: clamp(0.85rem, 1.5vw, 0.95rem);
       color: #666;
       margin-bottom: 0.5rem;
     }
+
+    /* PROJECTS SECTION */
     .project-title {
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 5vw, 2rem);
       font-weight: 700;
       margin-bottom: 2rem;
       text-align: center;
       font-family: 'Poppins', Arial, sans-serif;
       border-bottom: 1px solid #ccc;
-      padding-bottom: 1rem;
+      padding: 0 1rem 1rem 1rem;
     }
+
     .project-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
       margin-top: 2rem;
+      padding: 0 1rem;
     }
+
     .project-card {
       background: #fff;
       border: 1px solid #ddd;
@@ -196,39 +293,44 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 1.5rem;
       text-align: center;
-      width: 300px;
+      width: 100%;
+      max-width: 350px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 350px;
     }
+
     .project-card img {
       width: 100%;
       height: auto;
       border-radius: 6px;
       margin-bottom: 0.5rem;
-      max-width: 320px;
     }
+
     .project-thumb-link {
       display: block;
       margin-bottom: 0.5rem;
-      font-size: 1.1rem;
+      font-size: clamp(1rem, 2vw, 1.1rem);
       color: #333;
       text-decoration: underline;
     }
+
     .project-name {
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
       font-weight: 600;
       margin-bottom: 0.5rem;
       color: #000;
       font-family: 'Poppins', Arial, sans-serif;
     }
+
     .project-description {
-      font-size: 1rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
       color: #666;
       margin-bottom: 1rem;
       text-align: left;
+      line-height: 1.6;
     }
+
     .project-btn {
       background-color: #c0392b;
       color: #fff;
@@ -237,334 +339,357 @@
       text-decoration: none;
       font-weight: bold;
       transition: background 0.2s ease;
+      align-self: center;
     }
+
     .project-btn:hover {
       background-color: #a93226;
     }
+
+    /* CONTAINER & MAIN SECTION */
+    #main {
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* FOOTER STYLES */
     #footer {
-      padding: 0.16 rem 0;
-      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      font-size: clamp(0.85rem, 1.5vw, 0.9rem);
       background-color: #030303;
       color: #ffffff;
+      width: 100%;
     }
+
     .footer-section {
       text-align: center;
-      padding: 1rem 0;
+      padding: 1rem;
       font-family: 'Poppins', Arial, sans-serif;
     }
+
     .footer-row {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      gap: 2rem;
       max-width: 1100px;
       margin: 0 auto 2rem auto;
+      padding: 0 1rem;
     }
-    /* .footer-col {
-      flex: 1 1 220px;
-      max-width: 300px;
-      text-align: center; */
+
     .footer-title {
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: 600;
       color: #ffffff;
       margin-bottom: 0.5rem;
     }
-    .footer-post {
-      display: flex;
-      align-items: center;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-    }
-    .footer-date-badge {
-      background-color: #c0392b;
-      color: #ffffff;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-    }
-    .footer-date-badge strong {
-      font-size: 1.2rem;
-      display: block;
-    }
-    .footer-description {
-      font-size: 0.9rem;
-      color: #ffffff;
-      margin-top: 0.5rem;
-    }
+
     .footer-social {
       margin: 1.5rem 0 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-    .footer-social .icon:hover {
+
+    .footer-social a {
+      color: #ffffff;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      transition: color 0.2s;
+    }
+
+    .footer-social a:hover {
       color: #c0392b;
     }
+
     .footer-location {
-      font-size: 0.9rem;
+      font-size: clamp(0.85rem, 1.5vw, 0.9rem);
       color: #ffffff;
       margin-top: 0.5rem;
       font-weight: bold;
     }
+
     .footer-copyright {
-      font-size: 0.8rem;
+      font-size: clamp(0.75rem, 1.2vw, 0.8rem);
       text-align: center;
       color: #ffffff;
       margin-top: 1rem;
+      width: 100%;
+    }
+
+    /* MOBILE OPTIMIZATIONS */
+    @media (max-width: 480px) {
+      #header {
+        padding: 1.5rem 0.5rem;
+      }
+
+      #nav ul {
+        gap: 0.5rem;
+      }
+
+      #nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .box {
+        width: 95%;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+      }
+
+      .skills-row,
+      .experience-row,
+      .edu-cert-row,
+      .project-row {
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+      }
+
+      .skill-col,
+      .experience-col,
+      .edu-col,
+      .cert-col {
+        flex: 1 1 150px;
+        max-width: 100%;
+      }
+
+      .project-card {
+        max-width: 100%;
+        padding: 1rem;
+      }
+    }
+
+    /* TABLET OPTIMIZATIONS */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .skills-row,
+      .experience-row,
+      .project-row {
+        gap: 1.5rem;
+      }
+
+      .skill-col,
+      .experience-col,
+      .project-card {
+        flex: 1 1 45%;
+      }
+    }
+
+    /* DESKTOP OPTIMIZATIONS */
+    @media (min-width: 769px) {
+      #header {
+        padding: 2rem 2rem;
+      }
+
+      #nav ul {
+        gap: 2.5rem;
+      }
+
+      .box {
+        width: 85%;
+      }
     }
   </style>
-        <link rel="icon" type="image/png" href="assets/images/github.png" />
-		<title>Rhodalyn Yeboah | Data Analyst Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+</head>
+<body class="homepage is-preload">
+  <div id="page-wrapper">
 
-			<!-- Header -->
-				<section id="header">
-					<h1 style="font-size: 2.5rem; font-weight: 600; margin-top: 3rem; margin-bottom: 2rem; font-family: 'Poppins', Arial, sans-serif; letter-spacing: 0.02rem; text-align: center;">
-                        Rhodalyn Yeboah  |  Data Analyst
-                    </h1>
-					<!-- Nav -->
-					<nav id="nav">
-					    <ul>
-						    <li><a href="#skills">Skills, Tools & Software</a></li>
-							<li><a href="#experience">Experience</a></li>
-							<li><a href="#education&certifications">Education & Certifications</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="https://docs.google.com/document/d/1t1l_c7GqSCE3kS0GO4xJsxew3DYDeSi8/edit?usp=sharing&ouid=108006900844854777974&rtpof=true&sd=true"target="_blank">Résumé</a></li>
-                            <li><a href="mail.html" target="_blank" class="button">Contact me</a></li>
+    <!-- Header -->
+    <section id="header">
+      <h1>Rhodalyn Yeboah | Data Analyst</h1>
+      
+      <!-- Navigation -->
+      <nav id="nav">
+        <ul>
+          <li><a href="#skills">Skills, Tools & Software</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education&certifications">Education & Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="https://docs.google.com/document/d/1t1l_c7GqSCE3kS0GO4xJsxew3DYDeSi8/edit?usp=sharing&ouid=108006900844854777974&rtpof=true&sd=true" target="_blank">Résumé</a></li>
+          <li><a href="mail.html" target="_blank" class="button">Contact me</a></li>
+        </ul>
+      </nav>
+    </section>
 
-							<!-- Projects (Moved here)
-							<li>
-							<a href="#projects" style="font-size: 1rem; font-style: normal; font-weight: bold;">Projects</a>
-							<ul>
-								<li><a href="#powerbi">Power BI Dashboard</a></li>
-								<li><a href="#python">Python Analysis</a></li>
-								<li><a href="#SQL">SQL Database Management</a></li>
-								<li><a href="#Excel">Excel Reports</a></li>
-								<li>
-								<a href="#Others">Others</a>
-								<ul>
-									<li><a href="blog.html">Blogs</a></li>
-								</ul>
-								</li>
-							</ul> -->
-							<!-- CV
-							<li><a href="assets/documents/CV.pdf" target="_blank" style="font-size: 1rem; font-style: normal; font-weight: bold;">Curriculum Vitae</a></li>
-							<!-- Contact -->
-							<!-- <li><a href="mail.html" target="_blank" class="button" style="font-size: 1rem; font-style: normal; font-weight: bold;">Contact me</a></li> -->
-						</ul>
-						</nav>
-				<!-- Banner -->
-				<section class="box" style="background-color: #7e8f8b; padding: 2rem;">
-				<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
-					
-					<!-- Image on the left -->
-					<div style="flex: 1; min-width: 400px;">
-					<img src="assets/images/profile.jpg" alt="Profile" style="width: 50%; border-radius: 5px;" />
-					</div>
+    <!-- Banner/About Section -->
+    <section class="box">
+      <div style="flex: 1; min-width: 0;">
+        <img src="assets/images/profile.jpg" alt="Profile Photo" />
+      </div>
+      <div style="flex: 1.5; min-width: 0;">
+        <h2>About</h2>
+        <p>
+          I'm a data analyst passionate about turning raw data into clear, actionable insights that help businesses make informed decisions and drive measurable impact. My work focuses on leveraging data to solve real-world problems.
+        </p>
+        <p style="margin-top: 1.5em;">
+          I'm currently exploring the integration of responsible AI and automation to streamline reporting and enhance data-driven strategies. I'm especially interested in projects that combine analytics with meaningful business outcomes.
+        </p>
+      </div>
+    </section>
 
-					<!-- Text on the right -->
-					<div style="flex: 2; min-width: 250px;">
-					<h2 style="font-size: 1.3rem;">About</h2>
-					<p style="font-size: 1.1rem; color: black;">
-                        I’m a data analyst passionate about turning raw data into clear, actionable insights that help businesses make informed decisions and drive measurable impact. My work focuses on uncovering trends, identifying opportunities and solving problems using data visualization, statistical analysis, and automation.					</p>
-					<p style="margin-top: 1.5em; font-size: 1.1rem; color: black;">
-						<p style="font-size: 1.1rem; color: black;">
-                        I’m currently exploring the integration of responsible AI and automation to streamline reporting and enhance data-driven strategies. I’m especially interested in projects that use analytics to support business growth, sustainability as well as inclusive innovation.						</p>
-					</p>
-					</div>
-				</div>
-		</section>
-				<!-- Intro -->
-					<section id="intro" class="container">
-						<header>
-						    <h2 id="skills" class="skills-title"> Skills, Tools & Software</h2>
-                        </header>   
-						<div class="skills-row">
-							 <div class="skill-col">
-								<i class="fa-solid fa-database fa-5x"></i>
-								<h3 class="skill-heading">Data Collection &<br>Preparation</h3>
-                                <p class="skill-description">
-                                    I collect and manage end-to-end data workflows, including data sourcing, extraction, and wrangling. Using <strong style="color: black;">SQL</strong>, <strong style="color: black;">Excel</strong>, and <strong style="color: black;">Python</strong>, I clean, validate, and transform raw data into structured formats optimized for analysis and automation. I ensure that relevant data is collected from the most relevant sources.
-								</p>
-							</div>
-							<div class="skill-col">
-                                <i class="fa-solid fa-magnifying-glass-chart fa-5x"></i>
-                                <h3 class="skill-heading">Analysis &<br>Interpretation</h3>
-                                <p class="skill-description">
-                                    I focus on uncovering patterns, measuring impact, and deriving actionable insights. I leverage <strong style="color: black;">Python libraries</strong> and <strong style="color: black;">Excel</strong> to perform descriptive and inferential statistical analyses, and use <strong style="color: black;">SQL</strong> to execute queries across large-scale relational databases.
-								</p>
-							</div>
-                            <div class="skill-col">
-                                <i class="fa-solid fa-chart-line fa-5x"></i>
-                                <h3 class="skill-heading">Predictive Modeling</h3>
-                                <p class="skill-description">
-                                    I apply foundational machine learning techniques using Python libraries like <strong style="color: black;">Scikit-learn</strong> to build, evaluate, and interpret predictive models for classification and regression tasks. I make robust and reliable predictions that inform strategic decisions.
-								</p>
-							</div>
-						    <div class="skill-col">
-							    <i class="fa-solid fa-chart-pie fa-5x"></i>
-							    <h3 class="skill-heading">Communication & presentation</h3>
-							    <p class="skill-description">
-								    I communicate relevant and strategic insights to stakeholders through data-driven reports, dynamic dashboards, and visual analytics tailored to both technical and non-technical audiences utilizing <strong style="color: black;">Power BI</strong>, <strong style="color: black;">Excel</strong>, and <strong style="color: black;">Python visualization libraries</strong>.
-							    </p>
-						    </div>
-                        </div>
-                    </section>
-                        
-					<!--</div>
-						<footer>
-							<ul class="actions">
-							    <li><a href="mail.html" class="button">Get Started</a></li>
-							    <li><a href="#" class="button alt large">Learn More</a></li>-->
-							</ul>
-						</footer>
-					</section>
-							<header id="experience" style="margin-top: 2rem;">
-							<h2 class="experience-title">Experience</h2>
-							<div class="experience-row">
-								<div class="experience-col">
-                                    <h3 class="experience-role">Data Analyst Bootcamp Graduate</h3>
-                                    <div class="experience-org">Generation Ghana | Accra, Ghana</div>
-                                    <div class="experience-date">May – July 2026</div>
-                                </div>
-                                <div class="experience-col">
-                                    <h3 class="experience-role">IT Performance Analyst / IT Support</h3>
-                                    <div class="experience-org">Nestlé Central & West Africa | Accra, Ghana</div>
-                                    <div class="experience-date">January 2024 – October 2024</div>
-                                </div>
-                                <div class="experience-col">
-                                    <h3 class="experience-role">Intern</h3>
-                                    <div class="experience-org">Ehyen Transport Limited | Accra, Ghana</div>
-                                    <div class="experience-date">June – October 2020</div>
-                                </div>
-                            </div>
-                            </header>
+    <!-- Skills Section -->
+    <section id="intro" class="container">
+      <header>
+        <h2 id="skills" class="skills-title">Skills, Tools & Software</h2>
+      </header>
+      <div class="skills-row">
+        <div class="skill-col">
+          <i class="fa-solid fa-database fa-5x"></i>
+          <h3 class="skill-heading">Data Collection & Preparation</h3>
+          <p class="skill-description">
+            I collect and manage end-to-end data workflows, including data sourcing, extraction, and wrangling using SQL, Python, and Excel.
+          </p>
+        </div>
+        <div class="skill-col">
+          <i class="fa-solid fa-magnifying-glass-chart fa-5x"></i>
+          <h3 class="skill-heading">Analysis & Interpretation</h3>
+          <p class="skill-description">
+            I focus on uncovering patterns, measuring impact, and deriving actionable insights using Python libraries and statistical analysis.
+          </p>
+        </div>
+        <div class="skill-col">
+          <i class="fa-solid fa-chart-line fa-5x"></i>
+          <h3 class="skill-heading">Predictive Modeling</h3>
+          <p class="skill-description">
+            I apply foundational machine learning techniques using Python libraries like Scikit-learn to build and interpret predictive models.
+          </p>
+        </div>
+        <div class="skill-col">
+          <i class="fa-solid fa-chart-pie fa-5x"></i>
+          <h3 class="skill-heading">Communication & Presentation</h3>
+          <p class="skill-description">
+            I communicate insights to stakeholders through data-driven reports, dynamic dashboards, and visual analytics tailored to audiences.
+          </p>
+        </div>
+      </div>
+    </section>
 
-                    <!-- Education & Certifications -->
-							<header id = "education&certifications" style="margin-top: 4rem;">
-								<h2 class="edu-cert-title">Education & Certification</h2>
-								<div class="edu-cert-row">
-									<div class="edu-col">
-									    <h3 class="edu-heading">Education</h3>
-                                        <p class="edu-item"><strong>Generation Ghana Program | Accra, Ghana</strong></p>
-									    <p class="edu-item">Generation Data Analyst Program</p>
-                                        <p class="edu-date">2026</p>
-                                        <p class="edu-item"><strong>University of Ghana | Accra, Ghana</strong></p>
-                                        <p class="edu-item">BSc. Computer Science</p>
-                                        <p class="edu-date">2019 – 2023</p>
-                                    </div>
-								    <div class="cert-col">
-                                        <h3 class="edu-heading">Certification</h3>
-                                        <p class="cert-item"><strong>Cisco Networking Academy</strong></p>
-                                        <p class="cert-item">Data Analytics Essentials</p>
-                                        <p class="cert-date">2026</p>
-									    <!-- <p class="cert-description">This should contain certification details</p> -->
-								    </div>
-								</div>
-							</header>
-						<!-- Main -->
-						<section id="main">
-							<div class="container">
-								<div class="row">
-									<div class="col-12">
+    <!-- Experience Section -->
+    <section id="experience" class="container">
+      <header>
+        <h2 class="experience-title">Experience</h2>
+      </header>
+      <div class="experience-row">
+        <div class="experience-col">
+          <h3 class="experience-role">Data Analyst Bootcamp Graduate</h3>
+          <div class="experience-org">Generation Ghana | Accra, Ghana</div>
+          <div class="experience-date">May – July 2026</div>
+        </div>
+        <div class="experience-col">
+          <h3 class="experience-role">IT Performance Analyst / IT Support</h3>
+          <div class="experience-org">Nestlé Central & West Africa | Accra, Ghana</div>
+          <div class="experience-date">January 2024 – October 2024</div>
+        </div>
+        <div class="experience-col">
+          <h3 class="experience-role">Intern</h3>
+          <div class="experience-org">Ehyen Transport Limited | Accra, Ghana</div>
+          <div class="experience-date">June – October 2020</div>
+        </div>
+      </div>
+    </section>
 
-						<!-- Portfolio -->
-							<section id="projects">
-								<header class="major">
-									<h2 class="project-title">Projects</h2>
-								</header>
-								<div class="project-row">
-								    <!-- Project 1 -->
-								    <div class="project-card">
-										<a href="Project_1.html" class="image featured">
-										    <img src="assets/images/project_1.png" alt="Project 1" />
-										</a>
-										<a href="Project_1.html" class="project-thumb-link">Project 1</a>
-										<h3 class="project-name">Amazon Sales 2026</h3>
-										<p class="project-description">
-											The Amazon Sales Dashboard provides a comprehensive overview of sales performance, product trends, and customer insights for an Amazon store. It enables users to track key metrics such as revenue, units sold, top-performing products, and sales by region. Interactive visualizations help identify growth opportunities, monitor inventory levels, and optimize sales strategies for improved business outcomes.
-                                        </p>
-										<a href="Project_1.html" class="project-btn">View project</a>
-									</div>
-								    <!-- Project 2 -->
-								    <div class="project-card">
-										<a href="Project_2.html" class="image featured">
-											<img src="assets/images/project_2.png" alt="Project 2" />
-										</a>
-										<a href="Project_2.html" class="project-thumb-link" >Project 2</a>
-										<h3 class="project-name">Annual Tourism Revenue</h3>
-										<p class="project-description">
-                     								 This interactive Power BI dashboard presents key insights from an annual tourism report, focusing on revenue, visitor trends, and customer satisfaction. It provides a clear snapshot of tourism performance over the year across different regions and months.
-										</p>
-										<a href="Project_2.html" class="project-btn">View project</a>
-									</div>
-                                    <!-- Project 3 -->
-									<div class="project-card">
-										<a href="Project_3.html" class="image featured">
-											<img src="assets/images/project_3.png" alt="Project 3 Thumbnail" />
-										</a>
-										<a href="Project_3.html" class="project-thumb-link">Project 3 </a>
-										<h3 class="project-name">Car Sales Analysis</h3>
-										<p class="project-description">
-											This interactive Power Bi dashboard on Car sales showcases my ability to turn raw sales data into actionable business insights. Using a real-world-style dataset, I built a Car Sales Dashboard that highlights market performance, regional differences and strategic opportunities for manufacturers and dealerships.
-										</p>
-										<a href="Project_3.html" class="project-btn">View project</a>
-									</div>
-								</div>
-							</section>
-				<!-- Footer -->
-				
-				<section id="footer" class="footer-section">
-				<div class="footer-row">
-				
-					<!-- Left Column
-					<div class="footer-col">
-						<h2 class="footer-title">Latest Post</h2>
-                        <div class="footer-posts">
-							<span class="footer-date-badge">
-                                Aug<br><strong>12</strong>
-                            </span>
-							<h3 class="footer-post-content">Dolore tempus ipsum feugiat nulla</h3>
-							<p class="footer-post-description">
-                                Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.
-                            </p>
-						</div> -->
-					</div>
-					<!-- Connect Column -->
-					<div class="footer-col">
-						<h2 class="footer-title">Connect with Me</h2>
-						<div class="footer-social">
-							<!-- <a class="icon brands fa-medium" href="https://medium.com/@mkboamah" target="_blank"><span class="label">Medium</span></a> -->
-							<a class="icon fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/rhodalyn-yeboah" target="_blank" aria-label="LinkedIn"></a>
-							<a class="icon fa-brands fa-github" href="https://github.com/Rhodalyn029" target="_blank" aria-label="Github"></a>
-							<a class="icon fa-solid fa-envelope" href="mailto:rhodayeboah45@gmail.com" target="_blank" aria-label="Email"></a>
-						</div>
-                        <p class="footer-location"><strong>Location:</strong> Accra, Ghana</strong></p>
-					</div>
-					<!-- Copyright -->
-					<div class="footer-copyright">
-                        &copy; 2026 Yeboah. All rights reserved.
-				    </div>
-                </div>
-				</section>
-						<!-- Scripts -->
-							<!--<script src="assets/js/jquery.min.js"></script>
-							<script src="assets/js/jquery.dropotron.min.js"></script>
-							<script src="assets/js/browser.min.js"></script>
-							<script src="assets/js/breakpoints.min.js"></script>
-							<script src="assets/js/util.js"></script>
-							<script src="assets/js/main.js"></script>-->
-					</body>
-				</html>
-				</div>
-			</div>
-		</section>
+    <!-- Education & Certifications Section -->
+    <section id="education&certifications" class="container">
+      <header>
+        <h2 class="edu-cert-title">Education & Certification</h2>
+      </header>
+      <div class="edu-cert-row">
+        <div class="edu-col">
+          <h3 class="edu-heading">Education</h3>
+          <p class="edu-item"><strong>Generation Ghana Program | Accra, Ghana</strong></p>
+          <p class="edu-item">Generation Data Analyst Program</p>
+          <p class="edu-date">2026</p>
+          <p class="edu-item"><strong>University of Ghana | Accra, Ghana</strong></p>
+          <p class="edu-item">BSc. Computer Science</p>
+          <p class="edu-date">2019 – 2023</p>
+        </div>
+        <div class="cert-col">
+          <h3 class="cert-heading">Certification</h3>
+          <p class="cert-item"><strong>Cisco Networking Academy</strong></p>
+          <p class="cert-item">Data Analytics Essentials</p>
+          <p class="cert-date">2026</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Main Content Section -->
+    <section id="main">
+      <div class="container">
+        <!-- Projects Section -->
+        <section id="projects">
+          <header>
+            <h2 class="project-title">Projects</h2>
+          </header>
+          <div class="project-row">
+            <!-- Project 1 -->
+            <div class="project-card">
+              <a href="Project_1.html">
+                <img src="assets/images/project_1.png" alt="Amazon Sales Dashboard" />
+              </a>
+              <a href="Project_1.html" class="project-thumb-link">Project 1</a>
+              <h3 class="project-name">Amazon Sales 2026</h3>
+              <p class="project-description">
+                The Amazon Sales Dashboard provides a comprehensive overview of sales performance, product trends, and customer insights.
+              </p>
+              <a href="Project_1.html" class="project-btn">View project</a>
+            </div>
 
+            <!-- Project 2 -->
+            <div class="project-card">
+              <a href="Project_2.html">
+                <img src="assets/images/project_2.png" alt="Annual Tourism Revenue" />
+              </a>
+              <a href="Project_2.html" class="project-thumb-link">Project 2</a>
+              <h3 class="project-name">Annual Tourism Revenue</h3>
+              <p class="project-description">
+                This interactive Power BI dashboard presents key insights from an annual tourism report, focusing on revenue and visitor trends.
+              </p>
+              <a href="Project_2.html" class="project-btn">View project</a>
+            </div>
 
+            <!-- Project 3 -->
+            <div class="project-card">
+              <a href="Project_3.html">
+                <img src="assets/images/project_3.png" alt="Car Sales Analysis" />
+              </a>
+              <a href="Project_3.html" class="project-thumb-link">Project 3</a>
+              <h3 class="project-name">Car Sales Analysis</h3>
+              <p class="project-description">
+                This interactive Power BI dashboard on car sales showcases the ability to turn raw sales data into actionable business insights.
+              </p>
+              <a href="Project_3.html" class="project-btn">View project</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
 
+    <!-- Footer -->
+    <section id="footer" class="footer-section">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h2 class="footer-title">Connect with Me</h2>
+          <div class="footer-social">
+            <a class="icon fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/rhodalyn-yeboah" target="_blank" title="LinkedIn"></a>
+            <a class="icon fa-brands fa-github" href="https://github.com/Rhodalyn029" target="_blank" title="GitHub"></a>
+            <a class="icon fa-solid fa-envelope" href="mailto:rhodayeboah45@gmail.com" target="_blank" title="Email"></a>
+          </div>
+          <p class="footer-location"><strong>Location:</strong> Accra, Ghana</p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 Yeboah. All rights reserved.
+      </div>
+    </section>
 
+  </div>
+</body>
+</html>
